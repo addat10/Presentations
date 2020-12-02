@@ -1,0 +1,78 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	\insertframenumber/\inserttotalframenumber
+}
+\setbeamertemplate{footline}{
+	\hbox{%
+		\begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=1.5ex,leftskip=2ex,rightskip=2ex]{page footer}%
+			\usebeamerfont{title in head/foot}%
+			\insertshorttitle \hfill
+			\insertsection \hfill
+			\insertframenumber{} / \inserttotalframenumber
+	\end{beamercolorbox}}%
+}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{xcolor} % For textcolor
+\usepackage{pgfplots} % For Tikz
+\usepackage{media9}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\title[]{Flockng Algorithms for Source-Seeking Scenarios: From Double Integrators to General Non-Linear Vehicles}
+\author{\textbf{Adwait Datar}}
+\institute{Institute of Control Systems\\ Technical University of Hamburg\\ \vspace{1cm}This work was funded by the German Research Foundation (DFG) within their priority programme SPP 1914 Cyber-Physical Networking.}
+\date{}
+% \AtBeginSection[]
+% {
+% 	\begin{frame}
+% 	\frametitle{Table of Contents}
+% 	\tableofcontents[currentsection]
+%	 \end{frame}
+% } 
+
+\begin{document}
+\begin{frame}	
+  \titlepage
+\end{frame}
+
+%Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+% \tableofcontents
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{doc/1_Flocking_source_seek}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Other directions we have in mind}
+%	\begin{itemize}
+%		\item Scalable Analysis of consensus via IQCs \footnote{Khong, S.Z., Lovisari, E. and Rantzer, A., 2016. A unifying framework for robust synchronization of heterogeneous networks via integral quadratic constraints. IEEE Transactions on Automatic Control, 61(5), pp.1297-1309.}
+%		\item Stochastic version of IQCs for analyzing lossy consensus \footnote{Hu, B., Seiler, P. and Rantzer, A., 2017. A unified analysis of stochastic optimization methods using jump system theory and quadratic constraints. arXiv preprint arXiv:1706.08141.}
+%	\end{itemize}
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\begin{center}
+    \huge{Thank you}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

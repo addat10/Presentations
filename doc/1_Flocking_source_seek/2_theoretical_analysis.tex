@@ -16,27 +16,6 @@
 	\item For theoretical analysis: Use continuous-time versions of optimization methods to study the assymptotic properties\footnote{Redont et al., 2002} 
 \end{itemize}
 \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Continuous-time steepest descent with momentum}
-% \begin{itemize}
-% \item Consider the problem of minimizing a differentiable $f:\mathbb{R}^n\rightarrow \mathbb{R}$
-% \pause
-% \item The steepest descent iteration is
-% \begin{equation}
-% x_{k+1}=x_k - \alpha \nabla f(x_k)
-% \end{equation}
-% \pause
-% \item The continuous-time version of the steepest descent dynamics 
-% \begin{equation}
-% \dot{x}= - \nabla f(x_k)
-% \end{equation}
-% \pause
-% \item The continuous-time version of the steepest descent dynamics with momentum (also known as the heavy ball method with friction) 
-% \begin{equation}
-% m\ddot{x}+ \dot{x}= - \nabla f(x_k)
-% \end{equation}
-% \end{itemize}
-% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Continuous-time Newton method with momentum}
 \begin{itemize}
@@ -65,36 +44,6 @@ Defining the velocity variable $v$, the dyanmics can be written as
 \Dot{v}&=-k_1\nabla^2 f(x) v -k_2 \nabla f(x), 
 \end{split}
 \end{equation}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Flocking and schooling in nature}
-
-\begin{minipage}{0.45\textwidth}	
-	%\hspace{0.4cm}	
-	\begin{figure}
-		\includegraphics[width=\textwidth]{figures/flock_of_birds.jpg}
-		%\caption{Fukushima Disaster}
-		%\label{fig:flock_of_birds}
-	\end{figure}
-\end{minipage}
-\hspace{0.05cm}
-\begin{minipage}{0.45\textwidth}	
-	\begin{figure}
-		\includegraphics[width=\textwidth]{figures/schooling_fish.jpg}
-		%\caption{Oil Spills}
-		%\label{fig:schools_of_fish}
-	\end{figure}
-\end{minipage}
-\begin{itemize}	
-	\item The precise rules that these animals use are not known
-	\item Particle-based flocking seems to be an effective approach to model such behavior
-	\item In 1987, Reynold was working on animating flocking behavior where he proposed three rule
-	\begin{itemize}
-		\item Cohesion: Attempt to stay close to nearby neighbors
-		\item Separation: Avoid collisions with nearby flockmates
-		\item Alignment: attempt to match velocities with nearby flockmates
-	\end{itemize}
-\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Flocking dynamics}
