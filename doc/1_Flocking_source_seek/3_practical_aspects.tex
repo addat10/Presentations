@@ -1,0 +1,47 @@
+%\subsection{Practical aspects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Remarks on Plausibility of Assumptions}
+%Assumption for theoretical analysis:
+%\begin{itemize}
+%	\item A1: Agents are modeled as double integrators
+%	\item A2: The scalar field is assumed to be convex and twice differentiable
+%	\item A3: Measurements of $\psi(q_i)$, $\nabla \psi(q_i)$ and $\nabla^2\psi(q_i)$ by agent $i$
+%\end{itemize}
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Towards Experiments: Modeling agents as double integrators}
+\begin{figure}[h!]
+	\input{figures/block_diag}
+	\caption{Control Architecture}
+	\label{fig:control_arch}	
+\end{figure}
+\begin{itemize}
+	\item The flocking loop is runs at 20Hz 
+	\item $G_{\textnormal{vel}}$: closed loop velocity tracking loop runs at 100Hz
+	\item Initial tests show that the velocity controller is fast enough $\implies$ approximate $G_{\textnormal{vel}}$ by single integrator dynamics.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Towards Experiments: Convexity and differentiability of field}
+%
+%\begin{itemize}
+%    \item The actual fields in the scenarios of interest will most likely not be convex and perhaps not smooth enough
+%    \item Non-differentiability: Fit a locally smooth approximation
+%    \item Non-convexity: The result can then be seen as a local convergence result
+%    \item Experimental tests include log-convex fields and fields with 2 minima to probe the applicability of the algorithm when the assumption is violated.
+%\end{itemize}
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Towards Experiments: $\psi(q_i)$, $\nabla \psi(q_i)$, $\nabla^2\psi(q_i)$}
+\begin{figure}[h!]	
+		\includegraphics[width=7cm]{figures/newton_SD_direction.png}
+		%\caption{Histograms of errors (in angles) between the estimated and true gradient direction and modified Newton step direction when the field measurements are corrupted}
+		\label{fig:direction_errors_noise}
+	\end{figure}
+\begin{itemize}
+	\item Corrupt the field strength measurement by +/- 5 percent of the field strength. 
+	\item Estimate gradient by collecting local data and solving a least squares problem
+	\item Estimate the hessian by collecting data from neighbors and solving another least squares problem
+	\item Heuristic: Use Steepest Descent until the estimated hessian is positive definite.
+\end{itemize}
+\end{frame}
